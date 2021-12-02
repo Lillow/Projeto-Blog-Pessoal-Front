@@ -1,0 +1,18 @@
+#imagem-fundo {
+  background-image: url("https://i.imgur.com/eUWmeFz.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: #151313;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  font-weight: bold;
+}
