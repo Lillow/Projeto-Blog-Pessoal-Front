@@ -11,6 +11,8 @@
             <label for="">Nome</label>
             <input
               [(ngModel)]="user.nome"
+              name="nome"
+              id="nome"
               type="text"
               placeholder="Nome"
               class="form-control"
@@ -21,6 +23,8 @@
             <label for="">E-mail</label>
             <input
               [(ngModel)]="user.usuario"
+              name="email"
+              id="email"
               type="email"
               placeholder="E-mail"
               class="form-control"
@@ -41,14 +45,22 @@
 
           <div class="row mb-4">
             <label for="">Senha</label>
-            <input (input)="confirmSenha($event)" />
-            type="password" placeholder="Senha" class="form-control" />
+            <input
+              (input)="confirmSenha($event)"
+              name="senha"
+              id="senha"
+              type="password"
+              placeholder="Senha"
+              class="form-control"
+            />
           </div>
 
           <div class="row mb-4">
             <label for="">Confirmar senha</label>
             <input
               [(ngModel)]="user.senha"
+              nome="confirmaSenha"
+              id="confirmaSenha"
               type="password"
               placeholder="Confirmar senha"
               class="form-control"
