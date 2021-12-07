@@ -9,22 +9,46 @@
         <form action="">
           <div class="row mb-4">
             <label for="">Nome</label>
-            <input type="text" placeholder="Nome" class="form-control" />
+            <input
+              [(ngModel)]="user.nome"
+              type="text"
+              placeholder="Nome"
+              class="form-control"
+            />
           </div>
 
           <div class="row mb-4">
             <label for="">E-mail</label>
-            <input type="email" placeholder="E-mail" class="form-control" />
+            <input
+              [(ngModel)]="user.usuario"
+              type="email"
+              placeholder="E-mail"
+              class="form-control"
+            />
+          </div>
+
+          <div class="row mb-4">
+            <label for=""> Link da Foto</label>
+            <input
+              [(ngModel)]="user.foto"
+              type="text"
+              name="foto"
+              id="foto"
+              placeholder="Link da sua foto"
+              class="form-control"
+            />
           </div>
 
           <div class="row mb-4">
             <label for="">Senha</label>
-            <input type="password" placeholder="Senha" class="form-control" />
+            <input (input)="confirmSenha($event)" />
+            type="password" placeholder="Senha" class="form-control" />
           </div>
 
           <div class="row mb-4">
             <label for="">Confirmar senha</label>
             <input
+              [(ngModel)]="user.senha"
               type="password"
               placeholder="Confirmar senha"
               class="form-control"
@@ -38,6 +62,7 @@
               id="tipo"
               class="form-control"
               placeholder="Selecione o tipo de usuário"
+              (change)="tipoUser($event)"
             >
               <option value="">Selecione o tipo de usuário</option>
               <option value="admin">Administrador</option>
@@ -52,7 +77,12 @@
             >
               Cancelar
             </button>
-            <button class="btn btn-outline-success w-25 ml-3">Entrar</button>
+            <button
+              class="btn btn-outline-success w-25 ml-3"
+              (click)="cadastrar()"
+            >
+              Cadastrar
+            </button>
           </div>
         </form>
 
