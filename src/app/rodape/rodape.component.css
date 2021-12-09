@@ -26,3 +26,11 @@ ul.social-network li {
 .fa-linkedin:hover {
   color: #0a66c2;
 }
+
+.bg-violet {
+  background-color: #ba68c8;
+}
+
+.bg-dark-violet {
+  background-color: #47135049;
+}
