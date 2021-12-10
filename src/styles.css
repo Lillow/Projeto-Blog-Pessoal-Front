@@ -3,3 +3,19 @@
 html {
   scroll-behavior: smooth;
 }
+
+.fs-54 {
+  font-size: 54pt;
+}
+
+.fs-18 {
+  font-size: 18pt;
+}
+
+.bg-violet {
+  background-color: #ba68c8;
+}
+
+.text-violet {
+  color: #ba68c8;
+}
