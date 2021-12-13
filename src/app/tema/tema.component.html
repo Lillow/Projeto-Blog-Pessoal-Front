@@ -49,13 +49,24 @@
             <th scope="col" class="text-right">Modificações</th>
           </tr>
         </thead>
+
         <tbody>
           <tr *ngFor="let i of listaTemas">
             <th>{{ i.id }}</th>
             <td>{{ i.descricao }}</td>
             <td class="d-flex justify-content-end">
-              <button class="btn btn-info mr-3">Editar</button>
-              <button class="btn btn-danger">Apagar</button>
+              <button
+                class="btn btn-info mr-3"
+                [routerLink]="['/tema-edit', i.id]"
+              >
+                Editar
+              </button>
+              <button
+                class="btn btn-danger"
+                [routerLink]="['/tema-delete', i.id]"
+              >
+                Apagar
+              </button>
             </td>
           </tr>
         </tbody>

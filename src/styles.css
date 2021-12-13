@@ -19,3 +19,20 @@ html {
 .text-violet {
   color: #8800a1;
 }
+
+.btn-outline-violet {
+  border: solid #8800a1;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  padding: 8px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: #8800a1;
+  color: #8800a1;
+}
+
+.btn-outline-violet:hover {
+  background-color: #8800a1;
+  color: white;
+}
