@@ -6,6 +6,6 @@ export class Postagem {
   public titulo: string;
   public texto: string;
   public data: Date;
-  public usuario: User;
+  public criador: User;
   public tema: Tema;
 }
