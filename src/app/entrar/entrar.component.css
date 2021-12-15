@@ -1,0 +1,14 @@
+#imagem-fundo {
+  background-image: url("https://i.imgur.com/MrFTk1N.png");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  font-weight: bold;
+}
