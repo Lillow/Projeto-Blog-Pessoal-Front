@@ -29,6 +29,14 @@ export class AuthService {
     );
   }
 
+  atualizar(user: User): Observable<User> {
+    return this.http.put<User>(
+      'https://blog-pessoal-lillow.herokuapp.com/usuarios/atualizar',
+      user,
+      this.token
+    );
+  }
+
   getByIdUser(id: number): Observable<User> {
     return this.http.get<User>(
       `https://blog-pessoal-lillow.herokuapp.com/usuarios/${id}`,
