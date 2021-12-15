@@ -21,10 +21,32 @@ export class PostagemService {
     );
   }
 
+  getByTdPostagem(id: number): Observable<Postagem> {
+    return this.http.get<Postagem>(
+      `https://blog-pessoal-lillow.herokuapp.com/postagens/${id}`,
+      this.token
+    );
+  }
+
   postPostagem(postagem: Postagem): Observable<Postagem> {
     return this.http.post<Postagem>(
       'https://blog-pessoal-lillow.herokuapp.com/postagens',
       postagem,
+      this.token
+    );
+  }
+
+  putPostagem(postagem: Postagem): Observable<Postagem> {
+    return this.http.put<Postagem>(
+      'https://blog-pessoal-lillow.herokuapp.com/postagens',
+      postagem,
+      this.token
+    );
+  }
+
+  deletePostagem(id: number) {
+    return this.http.delete(
+      `https://blog-pessoal-lillow.herokuapp.com/postagens/${id}`,
       this.token
     );
   }

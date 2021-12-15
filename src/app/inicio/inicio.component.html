@@ -25,7 +25,7 @@
 
     <div class="col-md-6 d-flex justify-content-center">
       <img
-        src="https://i.imgur.com/9bNANPP.png"
+        src="https://item.imgur.com/9bNANPP.png"
         alt=""
         width="500px"
         height="500px"
@@ -85,22 +85,22 @@
       aria-labelledby="nav-todasPostagens-tab"
     >
       <div class="card-columns">
-        <div class="card text-center" *ngFor="let i of listaPostagens">
+        <div class="card text-center" *ngFor="let item of listaPostagens">
           <div class="card-body">
-            <h5 class="card-title m-0">{{ i.titulo }}</h5>
-            <small class="text-muted"> Tema: {{ i.tema.descricao }}</small>
+            <h5 class="card-title m-0">{{ item.titulo }}</h5>
+            <small class="text-muted"> Tema: {{ item.tema.descricao }}</small>
             <p class="card-text mt-3">
-              {{ i.texto }}
+              {{ item.texto }}
             </p>
             <p class="card-text">
               <small class="text-muted"
-                >{{ i.data | date: "dd-MM-yyyy" }} às
-                {{ i.data | date: "HH:mm" }}</small
+                >{{ item.data | date: "dd-MM-yyyy" }} às
+                {{ item.data | date: "HH:mm" }}</small
               >
             </p>
 
             <p class="card-text">
-              <small class="text-muted"> {{ i.criador.nome }}</small>
+              <small class="text-muted"> {{ item.criador.nome }}</small>
             </p>
           </div>
         </div>
@@ -114,19 +114,31 @@
       aria-labelledby="nav-minhasPostagens-tab"
     >
       <div class="card-columns">
-        <div class="card text-center" *ngFor="let i of user.minhasPostagens">
+        <div class="card text-center" *ngFor="let item of user.minhasPostagens">
           <div class="card-body">
-            <h5 class="card-title m-0">{{ i.titulo }}</h5>
-            <small class="text-muted"> Tema: {{ i.tema.descricao }}</small>
+            <h5 class="card-title m-0">{{ item.titulo }}</h5>
+            <small class="text-muted"> Tema: {{ item.tema.descricao }}</small>
             <p class="card-text mt-3">
-              {{ i.texto }}
+              {{ item.texto }}
             </p>
             <p class="card-text">
               <small class="text-muted"
-                >{{ i.data | date: "dd-MM-yyyy" }} às
-                {{ i.data | date: "HH:mm" }}</small
+                >{{ item.data | date: "dd-MM-yyyy" }} às
+                {{ item.data | date: "HH:mm" }}</small
               >
             </p>
+            <a
+              [routerLink]="['/postagem-edit', item.id]"
+              class="text-info mr-3"
+              href=""
+              >Editar</a
+            >
+            <a
+              [routerLink]="['/postagem-delete', item.id]"
+              class="text-danger"
+              href=""
+              >Apagar</a
+            >
           </div>
         </div>
       </div>
@@ -139,20 +151,20 @@
       aria-labelledby="nav-postagensPorTema-tab"
     >
       <div class="card-columns" *ngFor="let tema of listaTemas">
-        <div class="card text-center" *ngFor="let i of tema.postagem">
+        <div class="card text-center" *ngFor="let item of tema.postagem">
           <div class="card-body">
-            <h5 class="card-title m-0">{{ i.titulo }}</h5>
+            <h5 class="card-title m-0">{{ item.titulo }}</h5>
             <p class="card-text mt-3">
-              {{ i.texto }}
+              {{ item.texto }}
             </p>
             <p class="card-text">
               <small class="text-muted"
-                >{{ i.data | date: "dd-MM-yyyy" }} às
-                {{ i.data | date: "HH:mm" }}</small
+                >{{ item.data | date: "dd-MM-yyyy" }} às
+                {{ item.data | date: "HH:mm" }}</small
               >
             </p>
             <p class="card-text">
-              <small class="text-muted"> {{ i.criador.nome }}</small>
+              <small class="text-muted"> {{ item.criador.nome }}</small>
             </p>
           </div>
         </div>
@@ -218,8 +230,8 @@
             [(ngModel)]="idTema"
             (change)="findByIdTema()"
           >
-            <option *ngFor="let i of listaTemas" value="{{ i.id }}">
-              {{ i.descricao }}
+            <option *ngFor="let item of listaTemas" value="{{ item.id }}">
+              {{ item.descricao }}
             </option>
           </select>
         </div>
