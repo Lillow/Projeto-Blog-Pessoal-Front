@@ -28,6 +28,13 @@ export class PostagemService {
     );
   }
 
+  getByTituloPostagem(titulo: string): Observable<Postagem[]> {
+    return this.http.get<Postagem[]>(
+      `https://blog-pessoal-lillow.herokuapp.com/postagens/titulo/${titulo}`,
+      this.token
+    );
+  }
+
   postPostagem(postagem: Postagem): Observable<Postagem> {
     return this.http.post<Postagem>(
       'https://blog-pessoal-lillow.herokuapp.com/postagens',
