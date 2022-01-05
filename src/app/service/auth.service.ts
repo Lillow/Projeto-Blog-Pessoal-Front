@@ -54,6 +54,16 @@ export class AuthService {
     return ok;
   }
 
+  adm() {
+    let ok = false;
+
+    if (environment.tipo == 'adm') {
+      ok = true;
+    }
+
+    return ok;
+  }
+
   refreshToken() {
     this.token = {
       headers: new HttpHeaders().set('Authorization', environment.token),
