@@ -34,7 +34,7 @@ Concluido.
 ![image](https://user-images.githubusercontent.com/33943534/150700557-8f5241a0-a03e-42aa-b4e4-b1dfd3b6dd03.png)
 
 <h2>Como usar</h2>
-<p>Clique no link: <a href="https://nosso-blog-pessoal.netlify.app">Blog Pessoal</a> depois faça login ou cadastre-se caso não tenha feito ainda, faça postagens e veja as postagens feitas por outros usuários.</p>
+<p>Clique no link: <a href="https://nosso-blog-pessoal.netlify.app">Blog Pessoal</a> depois faça login ou cadastre-se caso não tenha feito ainda, faça postagens e veja as postagens feitas por outros usuários. Os dados do Heroku podem demorar um pouco para serem carregados.</p>
 
 <h2>Tecnologias</h2>
 <div>
